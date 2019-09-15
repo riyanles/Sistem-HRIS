@@ -1,0 +1,100 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.5.5-10.1.36-MariaDB
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema db_sistem_hrd
+--
+
+CREATE DATABASE IF NOT EXISTS db_sistem_hrd;
+USE db_sistem_hrd;
+
+--
+-- Definition of table `db_about`
+--
+
+DROP TABLE IF EXISTS `db_about`;
+CREATE TABLE `db_about` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `isi` longtext NOT NULL,
+  `isi2` longtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `db_about`
+--
+
+/*!40000 ALTER TABLE `db_about` DISABLE KEYS */;
+INSERT INTO `db_about` (`id`,`isi`,`isi2`) VALUES 
+ (1,'Visi Misi (optional tapi penting)\r\nHampir semua company profile pasti ada visi misi perusahaan. Hal ini agar pembaca tau target visi dan misi perusahaan anda. Cara membuat visi misi silahkan cari digoogle, saya tidak perlu menjelaskan.','Bagian ini yang terpenting. Menjelaskan apa sih yang perusahaan anda tawarkan? menjual produk apa saja? menjual jasa apa saja? Hal ini wajib ditulis di company profile anda.');
+/*!40000 ALTER TABLE `db_about` ENABLE KEYS */;
+
+
+--
+-- Definition of table `db_header`
+--
+
+DROP TABLE IF EXISTS `db_header`;
+CREATE TABLE `db_header` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `judul` varchar(45) NOT NULL,
+  `isi` longtext NOT NULL,
+  `img` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `db_header`
+--
+
+/*!40000 ALTER TABLE `db_header` DISABLE KEYS */;
+INSERT INTO `db_header` (`id`,`judul`,`isi`,`img`) VALUES 
+ (1,'PT. ABC XYZ','Membangun Bangsa','logo_perusahaan.jpg');
+/*!40000 ALTER TABLE `db_header` ENABLE KEYS */;
+
+
+--
+-- Definition of table `db_struktur_organisasi`
+--
+
+DROP TABLE IF EXISTS `db_struktur_organisasi`;
+CREATE TABLE `db_struktur_organisasi` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `judul` varchar(45) NOT NULL,
+  `desc` longtext NOT NULL,
+  `img` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `db_struktur_organisasi`
+--
+
+/*!40000 ALTER TABLE `db_struktur_organisasi` DISABLE KEYS */;
+INSERT INTO `db_struktur_organisasi` (`id`,`judul`,`desc`,`img`) VALUES 
+ (5,'db_struktur_organisasi','aaaa','db_struktur_organisasi.png');
+/*!40000 ALTER TABLE `db_struktur_organisasi` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
